@@ -49,7 +49,20 @@ else
 fi
 
 # Copy to the clipboard
-[ -n "$COPY_ALSO" ] && [ -x "`which pbcopy`" ] && echo $SHORT_URL | pbcopy
+if [ -n "$COPY_ALSO" ]; then
+  if [ -x "`which pbcopy`" ]; then
+    echo $SHORT_URL | pbcopy
+  else
+    echo 'gio: No clipboard command-line available :(' | $OUTPUT
+  fi
+fi
 
 # Open in a browser
-[ -n "$OPEN_ALSO" ] && open "$SHORT_URL"
+if [ -n "$OPEN_ALSO" ]; then
+  if [ -x "`which open`" ]; then
+    open "$SHORT_URL"
+  else
+    echo 'gio: No browser command-line available :(' | $OUTPUT
+  fi
+fi
+  
