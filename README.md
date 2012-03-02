@@ -16,7 +16,7 @@ Awesomeness
     -o    Open in browser
     -q    Quiet URL output, just create it
   
-  lolcat support automatically detected and abused.  (SPCA && PETA will be notified of your whereabouts.)
+  [lolcat](https://github.com/busyloop/lolcat) support automatically detected and abused.  (SPCA && PETA will be notified of your whereabouts.)
 
 
 Installation
