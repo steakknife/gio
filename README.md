@@ -12,6 +12,10 @@ Bugs, Feedback
 https://github.com/steakknife/gio/issues
 
 
+Hacking
+-------
+
+Please fork, submit pull requests.  Topical feature branches FTW.
 
 
 
