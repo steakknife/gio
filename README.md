@@ -9,6 +9,15 @@ Usage
     http://git.io/gio_install
 
 
+Awesomeness
+-----------
+
+  -c    Copy to clipboard 
+  -o    Open in browser
+  -q    Quiet URL output, just create it
+  
+  lolcat support automatically detected and abused.  (SPCA && PETA will be notified of your whereabouts.)
+
 
 Installation
 ------------
