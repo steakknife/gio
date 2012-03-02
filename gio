@@ -3,6 +3,8 @@
 # MIT Licensed
 
 OUTPUT=cat
+
+# detect and use nyan-insanity
 [ -x "`which lolcat`" ] && OUTPUT="lolcat -F 2"
 
 usage () {
@@ -26,6 +28,7 @@ EOF
 [ x"$1" = x'-o' ] && shift && OPEN_ALSO=1
 [ -z "$1" ] && usage
 
+# Make me a powerful url
 RAWURL=`echo "$1" | sed 's%[^:]*://%%;s%^/%%'`
 SUBDOM="${RAWURL%github.com*}"
 URLPATH="${RAWURL#*github.com}"
@@ -37,8 +40,12 @@ case "$SUBDOM" in
 esac
 URL="http$SSL_ENABLED://${SUBDOM}github.com${URLPATH}" 
 
-[ -n "$2" ] && EXTRA="-F code=$2"
+# Use a custom URL shortcut
+if [ -n "$2" ]; then
+  EXTRA="-F code=$2"
+fi
 
+# Shortening magic kung fu
 SHORT_URL=`curl -s -i http://git.io -F "url=$URL" $EXTRA | sed -n 's/[[:space:]]//g;s/^Location:\(.*\)/\1/p'`
 
 # Check the shortened url
