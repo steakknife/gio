@@ -16,12 +16,6 @@ Installation
     curl -L http://git.io/gio_install -o ~/bin/gio && chmod +x ~/bin/gio
 
 
-    
-Wiki
-----
-
-http://git.io/gio_wiki
-
 
 
 Bugs, Feedback
