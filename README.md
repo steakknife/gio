@@ -1,15 +1,34 @@
 gio, a gimpy interface to github's URL shortener.
 
+Usage
+-----
+
+    $ gio github.com/steakknife/gio/edit/master/README.md
+    http://git.io/6cwMLw
+    $ gio https://raw.github.com/steakknife/gio/master/gio gio_install
+    http://git.io/gio_install
+
+
+
 Installation
 ------------
 
-    curl -L https://raw.github.com/steakknife/gio/master/gio -o ~/bin/gio && chmod +x ~/bin/gio
+    curl -L http://git.io/gio_install -o ~/bin/gio && chmod +x ~/bin/gio
+
+
     
-    
+Wiki
+----
+
+http://git.io/gio_wiki
+
+
+
 Bugs, Feedback
 --------------
 
-https://github.com/steakknife/gio/issues
+http://git.io/gio_issues
+
 
 
 Hacking
