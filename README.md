@@ -1,5 +1,7 @@
 gio, a gimpy interface to github's URL shortener.
 
+![I <3 gio](http://content.screencast.com/users/zxcvxzcvxcv/folders/Jing/media/27166456-c7a2-4e48-9b5a-6ae77d1fb97b/00000002.png)
+
 Usage
 -----
 
