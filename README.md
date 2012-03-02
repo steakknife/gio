@@ -12,9 +12,9 @@ Usage
 Awesomeness
 -----------
 
-  -c    Copy to clipboard 
-  -o    Open in browser
-  -q    Quiet URL output, just create it
+    -c    Copy to clipboard 
+    -o    Open in browser
+    -q    Quiet URL output, just create it
   
   lolcat support automatically detected and abused.  (SPCA && PETA will be notified of your whereabouts.)
 
