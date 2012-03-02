@@ -41,11 +41,15 @@ URL="http$SSL_ENABLED://${SUBDOM}github.com${URLPATH}"
 
 SHORT_URL=`curl -s -i http://git.io -F "url=$URL" $EXTRA | sed -n 's/[[:space:]]//g;s/^Location:\(.*\)/\1/p'`
 
-if [ -n "$SHORT_URL" ] && [ -z "$QUIET" ]; then
-  echo $SHORT_URL | $OUTPUT
-else 
+# Check the shortened url
+if echo $SHORT_URL | grep -v 'git\.io' >/dev/null 2>&1 ; then
   echo "gio: Unable to shorten url" | $OUTPUT
   exit 1
+fi
+
+# Show url unless QUIETed
+if [ -z "$QUIET" ]; then
+  echo $SHORT_URL | $OUTPUT
 fi
 
 # Copy to the clipboard
@@ -65,4 +69,3 @@ if [ -n "$OPEN_ALSO" ]; then
     echo 'gio: No browser command-line available :(' | $OUTPUT
   fi
 fi
-  
